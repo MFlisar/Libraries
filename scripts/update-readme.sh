@@ -44,6 +44,10 @@ done
 echo -n "$output" > "$TEMP_MD"
 
 # Bereich im README ersetzen (sed: alles zwischen den Markern löschen, dann neuen Inhalt einfügen)
-sed -i.bak "/$START_MARKER/,/$END_MARKER/{ /$START_MARKER/{p; r $TEMP_MD
-        }; /$END_MARKER/p; d }" "$README"
+# Keine Anführungszeichen um das sed-Muster, damit der Zeilenumbruch nach r $TEMP_MD korrekt erkannt wird
+sed -i.bak /"$START_MARKER"/,/"$END_MARKER"/{
+  /"$START_MARKER"/{p; r $TEMP_MD
+  }
+  /"$END_MARKER"/p; d
+} "$README"
 rm "$TEMP_MD" "$README.bak"
