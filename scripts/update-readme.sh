@@ -8,13 +8,14 @@ README="README.md"
 START_MARKER="<!-- LIBRARIES START -->"
 END_MARKER="<!-- LIBRARIES END -->"
 
-# Generiere Markdown aus projects.yml
+# Hole die Projekte-Liste aus dem verschachtelten YAML
+projects_path=".[0].projects"
+group_count=$(yq "${projects_path} | length" "$YML")
 output=""
-group_count=$(yq '.projects | length' "$YML")
 for ((g=0; g<group_count; g++)); do
-  group=$(yq -r ".projects[$g].group" "$YML")
-  open_flag=$(yq -r ".projects[$g].open" "$YML")
-  items_count=$(yq ".projects[$g].items | length" "$YML")
+  group=$(yq -r "${projects_path}[$g].group" "$YML")
+  open_flag=$(yq -r "${projects_path}[$g].open" "$YML")
+  items_count=$(yq "${projects_path}[$g].items | length" "$YML")
   if [[ "$open_flag" == "true" ]]; then
     output+=$'\n<details open>\n\n'
   else
@@ -23,12 +24,12 @@ for ((g=0; g<group_count; g++)); do
   output+="<summary>$group ($items_count)</summary><br>\n\n"
   output+="| Libary | Description |\n| - | - |\n"
   for ((i=0; i<items_count; i++)); do
-    name=$(yq -r ".projects[$g].items[$i].name" "$YML")
+    name=$(yq -r "${projects_path}[$g].items[$i].name" "$YML")
     # Beschreibung: Für KMPParcelize den Beispieltext, sonst aus YAML
     if [[ "$name" == "KMPParcelize" ]]; then
       desc="a multiplatform parcelize implementation that supports all platforms"
     else
-      desc=$(yq -r ".projects[$g].items[$i].description" "$YML")
+      desc=$(yq -r "${projects_path}[$g].items[$i].description" "$YML")
     fi
     repo_url="https://github.com/MFlisar/$name"
     if [[ "$name" == "Lumberjack" || "$name" == "ComposeChangelog" || "$name" == "ComposeDebugDrawerg" || "$name" == "ComposeDialogs" || "$name" == "ComposePreferences" || "$name" == "ComposeThemer" || "$name" == "ComposeColors" ]]; then
