@@ -7,6 +7,7 @@ YML="data/projects.yml"
 README="README.md"
 START_MARKER="<!-- LIBRARIES START -->"
 END_MARKER="<!-- LIBRARIES END -->"
+TEMP_MD=".readme_libs.md"
 
 # Hole die Projekte-Liste aus dem verschachtelten YAML
 projects_path=".[0].projects"
@@ -40,9 +41,11 @@ for ((g=0; g<group_count; g++)); do
   output+=$'\n'</details>\n\n'
 done
 
+echo -n "$output" > "$TEMP_MD"
+
 # Bereich im README ersetzen
-awk -v start="$START_MARKER" -v end="$END_MARKER" -v content="$output" '
-  BEGIN {inblock=0}
-  {if ($0 ~ start) {print; print content; inblock=1; next} else if ($0 ~ end) {inblock=0}}
-  !inblock {print}
-' "$README" > "$README.tmp" && mv "$README.tmp" "$README"
+awk -v start="$START_MARKER" -v end="$END_MARKER" \
+  'BEGIN {inblock=0} \
+  {if ($0 ~ start) {print; while ((getline line < ARGV[2]) > 0) print line; close(ARGV[2]); inblock=1; next} else if ($0 ~ end) {inblock=0}} \
+  !inblock {print}' "$README" "$TEMP_MD" > "$README.tmp" && mv "$README.tmp" "$README"
+rm "$TEMP_MD"
