@@ -18,7 +18,6 @@
 
 </details>
 
-
 <details open>
 
 <summary>KMP Libraries (2)</summary><br>
@@ -29,7 +28,6 @@
 | [Lumberjack](https://github.com/MFlisar/Lumberjack) | This is a full **logging library** with a build in way to log to console, file or any custom place as well as optional extensions to send a log file via mail or show it on the device. |
 
 </details>
-
 
 <details open>
 
@@ -45,6 +43,5 @@
 | [ComposeThemer](https://github.com/MFlisar/ComposeThemer) | This is a full **compose theme engine** that handles applying a theme as well as updating the system ui elements. Extendible and allows to simply apply user selected themes inside your app. |
 
 </details>
-
 
 <!-- LIBRARIES END -->

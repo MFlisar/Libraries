@@ -1,0 +1,68 @@
+[
+  {
+    "projects": [
+      {
+        "group": "Small Utilities",
+        "open": false,
+        "items": [
+          {
+            "name": "KMPParcelize",
+            "description": "a multiplatform parcelize implementation that supports all platformslity to KMP projects."
+          },
+          {
+            "name": "KMPPlatformContext",
+            "description": "helps to use the android context without custum setup inside `commonMain` code and also provide platforms default `IO Context`"
+          },
+          {
+            "name": "KMPMail",
+            "description": "provides a way to open the platforms email chooser and provide a subject, text and attachments"
+          }
+        ]
+      },
+      {
+        "group": "KMP Libraries",
+        "open": true,
+        "items": [
+          {
+            "name": "KotPreferences",
+            "description": "With this library you can declare **preferences via kotlin delegates** and observe and update them via kotlin flows. This works with any storage implementation, an implementation for JetPack DataStore is provided already."
+          },
+          {
+            "name": "Lumberjack",
+            "description": "This is a full **logging library** with a build in way to log to console, file or any custom place as well as optional extensions to send a log file via mail or show it on the device."
+          }
+        ]
+      },
+      {
+        "group": "KMP Compose Libraries",
+        "open": true,
+        "items": [
+          {
+            "name": "ComposeChangelog",
+            "description": "This library offers you a a **changelog dialog** for compose including the ability to show new logs on app start only as well as filtering and customisation."
+          },
+          {
+            "name": "ComposeColors",
+            "description": "A simple collection of colors that can be used inside any KMP Compose project."
+          },
+          {
+            "name": "ComposeDebugDrawerg",
+            "description": "This library offers you a **simple** and **easily extendable** debug drawer."
+          },
+          {
+            "name": "ComposeDialogs",
+            "description": "A compose framework for **modal dialogs**."
+          },
+          {
+            "name": "ComposePreferences",
+            "description": "This library offers you **preference screens** for compose including the ability of endless nesting subscreens as well as simple integration of custom preferences."
+          },
+          {
+            "name": "ComposeThemer",
+            "description": "This is a full **compose theme engine** that handles applying a theme as well as updating the system ui elements. Extendible and allows to simply apply user selected themes inside your app."
+          }
+        ]
+      }
+    ]
+  }
+]

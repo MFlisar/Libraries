@@ -1,16 +1,11 @@
-# Benötigt: powershell-yaml (Install-Module -Name powershell-yaml -Scope CurrentUser)
-Install-Module -Name powershell-yaml -Scope CurrentUser
-Import-Module powershell-yaml
-
-$YML = "data/projects.yml"
+$JSON = "data/projects.json"
 $README = "README.md"
 $START_MARKER = "<!-- LIBRARIES START -->"
 $END_MARKER = "<!-- LIBRARIES END -->"
 
-# Projekte-Liste aus YAML holen
-$yamlContent = Get-Content $YML -Raw
-$parsed = ConvertFrom-Yaml $yamlContent
-$projects = $parsed[0].projects
+# Projekte-Liste aus JSON holen
+$jsonContent = Get-Content $JSON -Raw | ConvertFrom-Json
+$projects = $jsonContent[0].projects
 
 $output = ""
 foreach ($groupObj in $projects) {
@@ -47,13 +42,10 @@ if ($startIdx -and $endIdx -and $endIdx -ge $startIdx) {
     $after = $readmeLines[$endIdx..($readmeLines.Count-1)]
     $outputLines = $output -split "`n"
     $newReadme = @($before) + $outputLines + $after
-    Set-Content -Path $README -Value $newReadme
+    $newReadmeString = $newReadme -join "`n"
+    # Mehrfache Leerzeilen am Ende reduzieren
+    $newReadmeString = $newReadmeString -replace "(`n){3,}", "`n`n"
+    Set-Content -Path $README -Value $newReadmeString
 }
 
-# Ergebnis prüfen
-$check = Get-Content $README -Raw
-if ($check -match [regex]::Escape($output.Trim())) {
-    Write-Host "README erfolgreich aktualisiert."
-} else {
-    Write-Host "Fehler: README wurde nicht korrekt aktualisiert!"
-}
+Write-Host "README aktualisiert."
