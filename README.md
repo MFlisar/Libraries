@@ -6,7 +6,7 @@
 
 <details>
 
-<summary>Small Utilities</summary><br>
+<summary>Small Utilities (1)</summary><br>
 
 | Libary | Description |
 | - | - |
@@ -16,7 +16,7 @@
 
 <details open>
 
-<summary>KMP Libraries</summary><br>
+<summary>KMP Libraries (2)</summary><br>
 
 | Libary | Description |
 | - | - |
@@ -28,7 +28,7 @@
 
 <details open>
 
-<summary>KMP Compose Libraries</summary><br>
+<summary>KMP Compose Libraries (6)</summary><br>
 
 | Libary | Description |
 | - | - |
@@ -40,6 +40,7 @@
 | [ComposeThemer](https://github.com/MFlisar/ComposeThemer/) | This is a full **compose theme engine** that handles applying a theme as well as updating the system ui elements. Extendible and allows to simply apply user selected themes inside your app. |
 
 </details>
+
 
 
 
