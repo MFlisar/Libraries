@@ -4,19 +4,5 @@
 
 # Here's a list of my main *KMP libraries*
 
-<details>
-
 <!-- LIBRARIES START -->
 <!-- LIBRARIES END -->
-
-
-
-
-
-
-
-
-
-
-
-

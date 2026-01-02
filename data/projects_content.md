@@ -1,3 +1,5 @@
+<details>
+
 <summary>Small Utilities (3)</summary><br>
 
 | Libary | Description |

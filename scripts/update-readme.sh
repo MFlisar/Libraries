@@ -13,17 +13,25 @@ output=""
 group_count=$(yq '.projects | length' "$YML")
 for ((g=0; g<group_count; g++)); do
   group=$(yq -r ".projects[$g].group" "$YML")
+  open_flag=$(yq -r ".projects[$g].open" "$YML")
   items_count=$(yq ".projects[$g].items | length" "$YML")
-  output+=$'\n<details'$( [[ "$group" == "KMP Libraries" || "$group" == "KMP Compose Libraries" ]] && echo ' open' )$'>\n\n'
+  if [[ "$open_flag" == "true" ]]; then
+    output+=$'\n<details open>\n\n'
+  else
+    output+=$'\n<details>\n\n'
+  fi
   output+="<summary>$group ($items_count)</summary><br>\n\n"
   output+="| Libary | Description |\n| - | - |\n"
   for ((i=0; i<items_count; i++)); do
     name=$(yq -r ".projects[$g].items[$i].name" "$YML")
-    desc=$(yq -r ".projects[$g].items[$i].description" "$YML")
-    # Link generieren (GitHub-Repo-Name = Name, ggf. mit / am Ende)
+    # Beschreibung: Für KMPParcelize den Beispieltext, sonst aus YAML
+    if [[ "$name" == "KMPParcelize" ]]; then
+      desc="a multiplatform parcelize implementation that supports all platforms"
+    else
+      desc=$(yq -r ".projects[$g].items[$i].description" "$YML")
+    fi
     repo_url="https://github.com/MFlisar/$name"
-    # Für ComposeDebugDrawerg ein / am Ende
-    if [[ "$name" == "Lumberjack" || "$name" == "ComposeChangelog" || "$name" == "ComposeDebugDrawerg" ]]; then
+    if [[ "$name" == "Lumberjack" || "$name" == "ComposeChangelog" || "$name" == "ComposeDebugDrawerg" || "$name" == "ComposeDialogs" || "$name" == "ComposePreferences" || "$name" == "ComposeThemer" || "$name" == "ComposeColors" ]]; then
       repo_url+="/"
     fi
     output+="| [$name]($repo_url) | $desc |\n"
@@ -37,4 +45,3 @@ awk -v start="$START_MARKER" -v end="$END_MARKER" -v content="$output" '
   {if ($0 ~ start) {print; print content; inblock=1; next} else if ($0 ~ end) {inblock=0}}
   !inblock {print}
 ' "$README" > "$README.tmp" && mv "$README.tmp" "$README"
-
