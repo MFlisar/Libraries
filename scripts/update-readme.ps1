@@ -13,7 +13,7 @@ function Build-Table($items, $maxImageWidth, $defaultImage) {
     foreach ($item in $items) {
         $name = $item.name
         $descHtml = Convert-MarkdownToHtml $item.description
-        $desc = $descHtml + "<br>" + "<picture><img src='https://img.shields.io/maven-central/v/$($item.'main-maven-id')?label=&style=for-the-badge&labelColor=444444&color=grey' alt='maven version'/></picture>"
+        $desc = $descHtml + "<picture><img src='https://img.shields.io/maven-central/v/$($item.'main-maven-id')?label=&style=for-the-badge&labelColor=444444&color=grey' alt='maven version'/></picture>"
         $image = Get-Image $item $defaultImage
         $repo_url = "https://github.com/MFlisar/$name"
         $table += "  <tr>" +
