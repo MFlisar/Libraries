@@ -35,7 +35,7 @@
 
 | Image | Libary | Description |
 | - | - | - |
-| <img src='media/kotlin-icon.png' alt='Image' style='max-width:200px;'/> | [ComposeChangelog](https://github.com/MFlisar/ComposeChangelog) | This library offers you a a **changelog dialog** for compose including the ability to show new logs on app start only as well as filtering and customisation. |
+| <img src='https://mflisar.github.io/ComposeChangelog/screenshots/core/changelog2.png' alt='Image' style='max-width:200px;'/> | [ComposeChangelog](https://github.com/MFlisar/ComposeChangelog) | This library offers you a a **changelog dialog** for compose including the ability to show new logs on app start only as well as filtering and customisation. |
 | <img src='media/kotlin-icon.png' alt='Image' style='max-width:200px;'/> | [ComposeColors](https://github.com/MFlisar/ComposeColors) | A simple collection of colors that can be used inside any KMP Compose project. |
 | <img src='media/kotlin-icon.png' alt='Image' style='max-width:200px;'/> | [ComposeDebugDrawerg](https://github.com/MFlisar/ComposeDebugDrawerg) | This library offers you a **simple** and **easily extendable** debug drawer. |
 | <img src='media/kotlin-icon.png' alt='Image' style='max-width:200px;'/> | [ComposeDialogs](https://github.com/MFlisar/ComposeDialogs) | A compose framework for **modal dialogs**. |
