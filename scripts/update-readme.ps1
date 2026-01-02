@@ -1,4 +1,4 @@
-$JSON = "data/projects.json"
+$JSON = "projects.json"
 $README = "README.md"
 $START_MARKER = "<!-- LIBRARIES START -->"
 $END_MARKER = "<!-- LIBRARIES END -->"

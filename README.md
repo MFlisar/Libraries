@@ -1,4 +1,4 @@
-![KMP](data/kotlin-banner.png)
+![KMP](media/kotlin-banner.png)
 
 [Image Source](https://kotlinlang.org/assets/images/open-graph/multiplatform.png)
 
