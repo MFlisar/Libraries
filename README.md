@@ -1,4 +1,4 @@
-![KMP](https://kotlinlang.org/assets/images/open-graph/multiplatform.png)
+![KMP](kotlin-banner.png)
 
 [Image Source](https://kotlinlang.org/assets/images/open-graph/multiplatform.png)
 
@@ -40,6 +40,7 @@
 | [ComposeThemer](https://github.com/MFlisar/ComposeThemer/) | This is a full **compose theme engine** that handles applying a theme as well as updating the system ui elements. Extendible and allows to simply apply user selected themes inside your app. |
 
 </details>
+
 
 
 
