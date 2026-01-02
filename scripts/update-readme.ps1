@@ -17,7 +17,7 @@ function Build-Table($items, $maxImageWidth, $defaultImage) {
         $image = Get-Image $item $defaultImage
         $repo_url = "https://github.com/MFlisar/$name"
         $table += "  <tr>" +
-            "<td style='vertical-align: top;'><img src='$image' alt='Image' style='max-width:$maxImageWidth;'/></td>" +
+            "<td style='vertical-align: top;'><picture><img src='$image' alt='Image' style='max-width:$maxImageWidth;'/></picture></td>" +
             "<td style='vertical-align: top;'><a href='$repo_url'>$name</a></td>" +
             "<td style='vertical-align: top;'>$desc</td>" +
             "</tr>`n"
