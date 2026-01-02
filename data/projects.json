@@ -7,15 +7,15 @@
         "items": [
           {
             "name": "KMPParcelize",
-            "description": "a multiplatform parcelize implementation that supports all platformslity to KMP projects."
+            "description": "A multiplatform parcelize implementation that supports all platforms."
           },
           {
             "name": "KMPPlatformContext",
-            "description": "helps to use the android context without custum setup inside `commonMain` code and also provide platforms default `IO Context`"
+            "description": "Helps to use the android context without custum setup inside `common` code and also provides a platform default `IO Context`."
           },
           {
             "name": "KMPMail",
-            "description": "provides a way to open the platforms email chooser and provide a subject, text and attachments"
+            "description": "Provides a way to open the platforms email chooser (with support to prefill the subject and contact as well as attaching files)."
           }
         ]
       },
