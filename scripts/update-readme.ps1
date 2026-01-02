@@ -3,6 +3,7 @@ $README = "README.md"
 $START_MARKER = "<!-- LIBRARIES START -->"
 $END_MARKER = "<!-- LIBRARIES END -->"
 $DEFAULT_IMAGE = "media/kotlin-icon.png"
+$MAX_IMAGE_WIDTH = "200px"
 
 # Projekte-Liste aus JSON holen
 $jsonContent = Get-Content $JSON -Raw | ConvertFrom-Json
@@ -25,7 +26,7 @@ foreach ($groupObj in $projects) {
         $desc = $item.description
         $image = $item.PSObject.Properties['image'] ? $item.image : $DEFAULT_IMAGE
         $repo_url = "https://github.com/MFlisar/$name"
-        $output += "| ![Image]($image) | [$name]($repo_url) | $desc |`n"
+        $output += "| <img src='$image' alt='Image' style='max-width:$MAX_IMAGE_WIDTH;'/> | [$name]($repo_url) | $desc |`n"
     }
     $output += "`n</details>`n`n"
 }
