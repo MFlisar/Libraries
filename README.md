@@ -30,8 +30,15 @@
 
 | Libary | Description |
 | - | - |
+| [ComposeChangelog](https://github.com/MFlisar/ComposeChangelog/) | ... |
+| [ComposeColors](https://github.com/MFlisar/ComposeColors/) | ... |
+| [ComposeDebugDrawerg](https://github.com/MFlisar/ComposeDebugDrawerg/) | ... |
+| [ComposeDialogs](https://github.com/MFlisar/ComposeDialogs/) | ... |
+| [ComposePreferences](https://github.com/MFlisar/ComposePreferences/) | ... |
+| [ComposeThemer](https://github.com/MFlisar/ComposeThemer/) | ... |
 
 </details>
+
 
 
 
