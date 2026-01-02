@@ -27,19 +27,12 @@ for ((g=0; g<group_count; g++)); do
   output+="| Libary | Description |\n| - | - |\n"
   for ((i=0; i<items_count; i++)); do
     name=$(yq -r "${projects_path}[$g].items[$i].name" "$YML")
-    # Beschreibung: Für KMPParcelize den Beispieltext, sonst aus YAML
-    if [[ "$name" == "KMPParcelize" ]]; then
-      desc="a multiplatform parcelize implementation that supports all platforms"
-    else
-      desc=$(yq -r "${projects_path}[$g].items[$i].description" "$YML")
+    desc=$(yq -r "${projects_path}[$g].items[$i].description" "$YML")
     fi
     repo_url="https://github.com/MFlisar/$name"
-    if [[ "$name" == "Lumberjack" || "$name" == "ComposeChangelog" || "$name" == "ComposeDebugDrawerg" || "$name" == "ComposeDialogs" || "$name" == "ComposePreferences" || "$name" == "ComposeThemer" || "$name" == "ComposeColors" ]]; then
-      repo_url+="/"
-    fi
     output+="| [$name]($repo_url) | $desc |\n"
   done
-  output+=$'\n'</details>\n\n'
+  output+=$'\n</details>\n\n'
 done
 
 echo -n "$output" > "$TEMP_MD"

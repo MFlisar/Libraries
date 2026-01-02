@@ -3,7 +3,7 @@
       open: false
       items:
         - name: KMPParcelize
-          description: A Kotlin Multiplatform library that brings Android's Parcelize functionality to KMP projects.
+          description: a multiplatform parcelize implementation that supports all platformslity to KMP projects.
         - name: KMPPlatformContext
           description: helps to use the android context without custum setup inside `commonMain` code and also provide platforms default `IO Context`
         - name: KMPMail
