@@ -6,10 +6,11 @@
 
 <details>
 
-<summary>Small Utilities (1)</summary><br>
+<summary>Small Utilities (2)</summary><br>
 
 | Libary | Description |
 | - | - |
+| [KMPParcelize](https://github.com/MFlisar/KMPParcelize) | a multiplatform parcelize implementation that supports all platforms |
 | [KMPPlatformContext](https://github.com/MFlisar/KMPPlatformContext) | helps to use the android context without custum setup inside `commonMain` code and also provide platforms default `IO Context` |
 
 </details>
@@ -40,6 +41,7 @@
 | [ComposeThemer](https://github.com/MFlisar/ComposeThemer/) | This is a full **compose theme engine** that handles applying a theme as well as updating the system ui elements. Extendible and allows to simply apply user selected themes inside your app. |
 
 </details>
+
 
 
 
