@@ -14,7 +14,7 @@ jobs:
 
   update-docs:
     name: Update README.md
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -25,6 +25,9 @@ jobs:
       # 1) update README.md by converting data/projects.yml to markdown table
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle Wrapper executable
+        run: chmod +x ./tools/gradlew
 
       - name: Publish Library
         run: ./gradlew updateDocs
