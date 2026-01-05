@@ -1,5 +1,6 @@
 ---
 icon: lucide/house
+title: Home
 ---
 
 ![Image title](media/kotlin-banner.png)
