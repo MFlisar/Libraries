@@ -11,20 +11,21 @@ data class ProjectItem(
     val image: String? = null,
     @SerialName("main-maven-id") val mainMavenId: String,
 ) {
-    fun markdownTableCellImage(maxImageWidth: String, defaultImage: String): String {
+    fun markdownTableCellImage(defaultImage: String): String {
         val img = image ?: defaultImage
-        return "<img src='$img' alt='Image' style='max-width:$maxImageWidth;'/>"
+        return "![image]($img)"
     }
 
     fun markdownTableCellLibrary(): String {
         val repoUrl = "https://github.com/MFlisar/$name"
-        return "<a href='$repoUrl'>$name</a>"
+        return "[$name]($repoUrl)"
     }
 
     fun markdownTableCellDescription() : String {
         //val desc = MarkdownUtil.convertMarkdownToHtml(description)
-        val image = "<img src='https://img.shields.io/maven-central/v/$mainMavenId?label=&style=for-the-badge&labelColor=444444&color=grey' alt='maven version'/>"
-        return description + "<br>" + image
+        val imageUrl = "https://img.shields.io/maven-central/v/$mainMavenId?label=&style=for-the-badge&labelColor=444444&color=grey"
+        val image = "![maven version]($imageUrl)"
+        return "$description<br>$image"
 
 
     }

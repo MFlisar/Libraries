@@ -296,4 +296,5 @@ toggle.name = "Switch to light mode"
 icon = "fontawesome/brands/github"
 link = "https://github.com/MFlisar"
 
+[project.markdown_extensions.attr_list]
 

@@ -42,7 +42,7 @@ fun main() {
             items = items
         ) { item: ProjectItem ->
             listOf(
-                item.markdownTableCellImage(maxImageWidth, defaultImagePath),
+                item.markdownTableCellImage(defaultImagePath) + "{: style=\"max-width:100%;height:auto;\"}",
                 item.markdownTableCellLibrary(),
                 item.markdownTableCellDescription()
             )
@@ -53,6 +53,7 @@ fun main() {
             append(pageHeader)
             appendLine()
             append(table)
+            append("{: style=\"table-layout:fixed;width:100%;\"}")
         }
 
         // schreibe Datei
