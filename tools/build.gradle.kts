@@ -16,3 +16,8 @@ kotlin {
         }
     }
 }
+
+tasks.register<JavaExec>("updateDocs") {
+    mainClass.set("UpdateDocsKt")
+    classpath = sourceSets["main"].runtimeClasspath
+}

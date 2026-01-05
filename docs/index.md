@@ -2,7 +2,7 @@
 icon: lucide/house
 ---
 
-![Image title](media/kotlin-banner.png){ align=center }
+![Image title](media/kotlin-banner.png)
 
 # Libraries
 

@@ -23,9 +23,9 @@ jobs:
           fetch-depth: 0
 
       # 1) update README.md by converting data/projects.yml to markdown table
-      - name: Update README.md
+      - name: Update Docs (Gradle)
         shell: pwsh
-        run: .\scripts\update-docs.ps1
+        run: ./tools/gradlew updateDocs
 
       # 2) Änderungen committen & pushen
       - name: Commit & push changes (if any)
