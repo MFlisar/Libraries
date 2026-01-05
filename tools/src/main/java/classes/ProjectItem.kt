@@ -11,13 +11,9 @@ data class ProjectItem(
     val image: String? = null,
     @SerialName("main-maven-id") val mainMavenId: String,
 ) {
-    fun getImage(defaultImage: String): String {
-        return image ?: defaultImage
-    }
-
     fun markdownTableCellImage(maxImageWidth: String, defaultImage: String): String {
-        val image = getImage(defaultImage)
-        return "<img src='$image' alt='Image' style='max-width:$maxImageWidth;'/>"
+        val img = image ?: defaultImage
+        return "<img src='$img' alt='Image' style='max-width:$maxImageWidth;'/>"
     }
 
     fun markdownTableCellLibrary(): String {
