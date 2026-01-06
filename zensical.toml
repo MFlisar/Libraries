@@ -54,7 +54,8 @@ nav = [
         { "KMP Libraries" = "libraries/kmp-libraries.md" },
         { "KMP Compose Libraries" = "libraries/kmp-compose-libraries.md" },
         # END-NAV-LIBRARIES
-    ] }
+    ] },
+    { "Compatibilities" = "compatibilities.md" },
 ]
 
 
@@ -292,9 +293,9 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-[[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://github.com/MFlisar"
+#[[project.extra.social]]
+#icon = "fontawesome/brands/github"
+#link = "https://github.com/MFlisar"
 
 [project.markdown_extensions.attr_list]
 
