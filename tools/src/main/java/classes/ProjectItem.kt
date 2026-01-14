@@ -26,7 +26,5 @@ data class ProjectItem(
         val imageUrl = "https://img.shields.io/maven-central/v/$mainMavenId?label=&style=for-the-badge&labelColor=444444&color=grey"
         val image = "![maven version]($imageUrl)"
         return "$description<br>$image"
-
-
     }
 }
