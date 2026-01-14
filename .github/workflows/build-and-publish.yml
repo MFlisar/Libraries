@@ -11,10 +11,12 @@ permissions:
   id-token: write
 
 jobs:
-
-  update-docs:
-    name: Execute updateDocs
+  publish:
+    name: Update docs + Build + Deploy Pages
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -22,17 +24,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 1) update README.md by converting data/projects.yml to markdown table
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
       - name: Make Gradle Wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Publish Library
+      - name: Update docs (Gradle)
         run: ./gradlew updateDocs
 
-      # 2) Änderungen committen & pushen
       - name: Commit & push changes (if any)
         shell: bash
         run: |
@@ -46,23 +46,25 @@ jobs:
             echo "No changes to commit."
           fi
 
-  deploy:
-    name: Deploy Github Page
-    needs: update-docs
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/configure-pages@v5
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v4
+          python-version: "3.x"
+
+      - name: Install zensical
+        run: pip install zensical
+
+      - name: Build site
+        run: zensical build --clean
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
         id: deployment
