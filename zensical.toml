@@ -60,7 +60,7 @@ nav = [
         { "Compatibilities" = "compatibilities.md" },
     ] },
     { "Personal" = [
-        { "Personal Libraries" = "personal-libraries.md" },
+        { "Personal Libraries" = "personal/libraries.md" },
     ] }
 ]
 

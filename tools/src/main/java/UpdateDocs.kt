@@ -29,7 +29,7 @@ fun main() {
     val fileProjectsJson = File(root, pathProjectsJson)
     val filePersonalProjectsJson = File(root, pathPersonalProjectsJson)
 
-    val fileZensical = File(root, "zensical.toml")
+    val fileZensical = File(root, pathZensicalToml)
 
     val folderLibraries = File(root, pathFolderProjects)
     val folderPersonalLibraries = File(root, pathFolderPersonalProjects)
@@ -70,17 +70,13 @@ fun main() {
         title = "Personal Libraries",
         items = personalProjects,
         folder = folderPersonalLibraries,
-        fileName = "personal-libraries"
+        fileName = "libraries"
     )
 
+    // -----------------
+    // 5) update navigation in zensical
+    // -----------------
 
-
-
-
-    // 2) Lese JSON und generiere neue Markdown-Dateien
-
-
-    // 3) update navigation in zensical
     val navInset =      "        "
     val navStartTag =   "        # BEGIN-NAV-LIBRARIES"
     val navEndTag =     "        # END-NAV-LIBRARIES"
