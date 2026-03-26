@@ -21,7 +21,7 @@
       ]
     },
     {
-      "group": "KMP Libraries",
+      "group": "Libraries",
       "items": [
         {
           "name": "KotPreferences",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "group": "KMP Compose Libraries",
+      "group": "Compose Libraries",
       "items": [
         {
           "name": "ComposeChangelog",
