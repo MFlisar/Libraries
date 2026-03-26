@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Libraries",
+    "description": "The repository for this website.",
+    "main-maven-id": null
+  },
+  {
+    "name": "Toolbox",
+    "description": "A very big collection of modules for my personal usage for my apps.",
+    "main-maven-id": "io.github.mflisar.toolbox/core"
+  },
+  {
+    "name": "kmp-devtools",
+    "description": "Offers useful `gradle` functions to set up KMP modules as well as a script to generate an automated documentation for my KMP librieries.",
+    "main-maven-id": "io.github.mflisar.kmpdevtools/core"
+  },
+  {
+    "name": "kmp-demo-composables",
+    "description": "A collection of reuseable compose components especially for the demos in my open source projects.",
+    "main-maven-id": "io.github.mflisar.democomposables/library"
+  }
+]
