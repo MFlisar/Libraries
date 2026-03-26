@@ -1,6 +1,6 @@
 ---
 icon: lucide/blocks
-title: KMP Libraries
+title: Libraries
 ---
 
 | Image | Library | Description |

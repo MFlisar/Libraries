@@ -1,6 +1,6 @@
 ---
 icon: lucide/blocks
-title: KMP Compose Libraries
+title: Compose Libraries
 ---
 
 | Image | Library | Description |

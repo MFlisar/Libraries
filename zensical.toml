@@ -51,8 +51,8 @@ nav = [
     { "Libraries" = [
         # BEGIN-NAV-LIBRARIES
         { "Small Utilities" = "libraries/small-utilities.md" },
-        { "KMP Libraries" = "libraries/kmp-libraries.md" },
-        { "KMP Compose Libraries" = "libraries/kmp-compose-libraries.md" },
+        { "Libraries" = "libraries/libraries.md" },
+        { "Compose Libraries" = "libraries/compose-libraries.md" },
         # END-NAV-LIBRARIES
     ] },
     { "Miscellaneous" = [
