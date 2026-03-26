@@ -1,3 +1,7 @@
+<!--
+    THIS FILE IS GENERATED. DO NOT EDIT MANUALLY.
+    To update this file, edit the source JSON and run the UpdateDocs tool.
+-->
 ---
 icon: lucide/blocks
 title: KMP Compose Libraries
