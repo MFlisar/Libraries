@@ -9,7 +9,7 @@ fun main() {
 
     val root = File(System.getProperty("user.dir")).parentFile
 
-    val fileProjectsJson = File(root, "projects.json")
+    val fileProjectsJson = File(root, "data/projects.json")
     val fileZensical = File(root, "zensical.toml")
     val defaultImagePath = "../media/kotlin-icon.png"
     val folderLibraries = File(root, "docs/libraries/")

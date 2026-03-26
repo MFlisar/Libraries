@@ -9,7 +9,7 @@ data class ProjectItem(
     val name: String,
     val description: String,
     val image: String? = null,
-    @SerialName("main-maven-id") val mainMavenId: String,
+    @SerialName("main-maven-id") val mainMavenId: String?
 ) {
     fun markdownTableCellImage(defaultImage: String): String {
         val img = image ?: defaultImage
@@ -22,6 +22,9 @@ data class ProjectItem(
     }
 
     fun markdownTableCellDescription() : String {
+        if (mainMavenId == null) {
+            return description
+        }
         //val desc = MarkdownUtil.convertMarkdownToHtml(description)
         val imageUrl = "https://img.shields.io/maven-central/v/$mainMavenId?label=&style=for-the-badge&labelColor=444444&color=grey"
         val image = "![maven version]($imageUrl)"
