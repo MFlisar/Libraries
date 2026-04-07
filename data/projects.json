@@ -20,7 +20,7 @@
         },
         {
           "name": "KMPIcon",
-          "description": "A gradle plugin to generate icons for KMP projects based on an android adaptive icon.",
+          "description": "A gradle plugin to generate icons for KMP projects based on an source image.",
           "main-maven-id": "io.github.mflisar.kmpicon/plugin"
         }
       ]
