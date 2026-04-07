@@ -17,6 +17,11 @@
           "name": "KMPMail",
           "description": "Provides a way to open the platforms email chooser (with support to prefill the subject and contact as well as attaching files).",
           "main-maven-id": "io.github.mflisar.kmpmail/library"
+        },
+        {
+          "name": "KMPIcon",
+          "description": "A gradle plugin to generate icons for KMP projects based on an android adaptive icon.",
+          "main-maven-id": "io.github.mflisar.kmpicon/plugin"
         }
       ]
     },
