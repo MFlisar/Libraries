@@ -22,12 +22,12 @@ If a new major version of any library is needed, I will update this documentatio
 
     Utilities do not depend on any compose version! It's safe to update them even when their major number has changed.
 
-| Library            | Version | Info                                     |
-|--------------------|---------|------------------------------------------|
-| KMPParcelize       | `2.0.0` | independent of any of my other libraries |
-| KMPPlatformContext | `2.0.0` | independent of any of my other libraries |
-| KMPMail            | `1.0.0` | independent of any of my other libraries |
-| KMPIcon            | `1.0.0` | independent of any of my other libraries |
+| Library            | Version | Info                                         |
+|--------------------|---------|----------------------------------------------|
+| KMPParcelize       | `2.0.0` | **independent** of any of my other libraries |
+| KMPPlatformContext | `2.0.0` | **independent** of any of my other libraries |
+| KMPMail            | `1.0.0` | **independent** of any of my other libraries |
+| KMPIcon            | `1.0.0` | **independent** of any of my other libraries |
 
 ## Libraries
 
@@ -35,9 +35,29 @@ If a new major version of any library is needed, I will update this documentatio
 
     Following libraries are no composable libraries but may contain a composable module.
 
-| Library        | Version  | Info                                     |
-|----------------|----------|------------------------------------------|
-| KotPreferences | `4.0.0`  | independent of any of my other libraries |
-| Lumberjack     | `10.0.0` | ...                                      |
+| Library        | Version  | Info                                         |
+|----------------|----------|----------------------------------------------|
+| KotPreferences | `4.0.0`  | **independent** of any of my other libraries |
+| Lumberjack     | `10.0.0` | **depends on** KMPParcelize *(1)*            |
 
+Notes:
 
+* *(1)* Some lumberjack modules do have additional dependencies:
+  * `feedback`... depends on `KMPMail` - the mail library is needed to send the feedback mails
+  * `composeviewer`... depends on `KMPPlatformContext` - the context is needed for the copy to clipboard functionality
+
+## Compose Libraries
+
+!!! note
+
+    Following libraries are composable libraries and do depend on the compose version.
+    Usually it's safe to update compose version to newer versions but following libraries are using the above mentioned compose versions.
+
+| Library            | Version | Info |
+|--------------------|---------|------|
+| ComposeChangelog   | `...`   | ...  |
+| ComposeColors      | `...`   | ...  |
+| ComposeDebugDrawer | `...`   | ...  |
+| ComposeDialogs     | `...`   | ...  |
+| ComposePreferences | `...`   | ...  |
+| ComposeThemer      | `...`   | ...  |
