@@ -20,13 +20,24 @@ If a new major version of any library is needed, I will update this documentatio
 
 !!! note
 
-    Utilities do not depend on any compose version!
+    Utilities do not depend on any compose version! It's safe to update them even when their major number has changed.
 
-| Library            | Version | Info                             |
-|--------------------|---------|----------------------------------|
-| KMPParcelize       | `2.0.0` | independent of any other library |
-| KMPPlatformContext | `2.0.0` | independent of any other library |
-| KMPMail            | `1.0.0` | independent of any other library |
-| KMPIcon            | `1.0.0` | independent of any other library |
+| Library            | Version | Info                                     |
+|--------------------|---------|------------------------------------------|
+| KMPParcelize       | `2.0.0` | independent of any of my other libraries |
+| KMPPlatformContext | `2.0.0` | independent of any of my other libraries |
+| KMPMail            | `1.0.0` | independent of any of my other libraries |
+| KMPIcon            | `1.0.0` | independent of any of my other libraries |
+
+## Libraries
+
+!!! note
+
+    Following libraries are no composable libraries but may contain a composable module.
+
+| Library        | Version  | Info                                     |
+|----------------|----------|------------------------------------------|
+| KotPreferences | `4.0.0`  | independent of any of my other libraries |
+| Lumberjack     | `10.0.0` | ...                                      |
 
 
