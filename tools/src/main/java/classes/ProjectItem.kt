@@ -2,7 +2,7 @@ package classes
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import utils.MarkdownUtil
+import kotlinx.serialization.Transient
 
 @Serializable
 data class ProjectItem(
@@ -11,13 +11,15 @@ data class ProjectItem(
     val image: String? = null,
     @SerialName("main-maven-id") val mainMavenId: String?
 ) {
+    @Transient
+    val repoUrl = "https://github.com/MFlisar/$name"
+
     fun markdownTableCellImage(defaultImage: String): String {
         val img = image ?: defaultImage
         return "![image]($img)"
     }
 
     fun markdownTableCellLibrary(): String {
-        val repoUrl = "https://github.com/MFlisar/$name"
         return "[$name]($repoUrl)"
     }
 
