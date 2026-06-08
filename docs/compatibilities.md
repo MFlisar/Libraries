@@ -36,21 +36,19 @@ If a new major version of any library is needed, I will update this documentatio
 
     Following libraries are no composable libraries but may contain a composable module.
 
-| Library        | Version  | Info                                         |
-|----------------|----------|----------------------------------------------|
-| KotPreferences | `4.0.0`  | **independent** of any of my other libraries |
-| Lumberjack     | `10.0.0` | **depends on** KMPParcelize ^(1)^            |
-
-* ^(1)^ Additional Lumberjack Dependencies
-    * `feedback` module... depends on KMPMail - the mail library is needed to send the feedback mails
-    * `composeviewer` module... depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality
+| Library        | Version  | Info                                                                                                                    |
+|----------------|----------|-------------------------------------------------------------------------------------------------------------------------|
+| KotPreferences | `4.0.0`  | **independent** of any of my other libraries                                                                            |
+| Lumberjack     | `10.0.0` | **depends on** KMPParcelize                                                                                             |
+|                |          | `feedback` module... depends on KMPMail - the mail library is needed to send the feedback mails                         |
+|                |          | `composeviewer` module... depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality |
 
 ## Compose Libraries
 
 !!! note
 
     Following libraries are composable libraries and do depend on the compose version.
-    Usually it's safe to update compose version to newer versions but following libraries are using the above mentioned compose versions.
+    Usually it's safe to update the compose version to a newer versions but following libraries are using the above mentioned compose versions.
 
 | Library            | Version | Info |
 |--------------------|---------|------|
