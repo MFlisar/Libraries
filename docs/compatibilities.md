@@ -23,12 +23,12 @@ If a new major version of any library is needed, I will update this documentatio
     Utilities do not depend on any compose version!
     It's safe to update them even when their major number has changed.
 
-| Library            | Version | Info                                         |
-|--------------------|---------|----------------------------------------------|
-| KMPParcelize       | `2.0.0` | **independent** of any of my other libraries |
-| KMPPlatformContext | `2.0.0` | **independent** of any of my other libraries |
-| KMPMail            | `1.0.0` | **independent** of any of my other libraries |
-| KMPIcon            | `1.0.0` | **independent** of any of my other libraries |
+| Library            | Version | Dependencies |
+|--------------------|---------|--------------|
+| KMPParcelize       | `2.0.0` | --           | 
+| KMPPlatformContext | `2.0.0` | --           |
+| KMPMail            | `1.0.0` | --           |
+| KMPIcon            | `1.0.0` | --           |
 
 ## Libraries
 
@@ -36,12 +36,10 @@ If a new major version of any library is needed, I will update this documentatio
 
     Following libraries are no composable libraries but may contain a composable module.
 
-| Library        | Version  | Info                                                                                                                    |
-|----------------|----------|-------------------------------------------------------------------------------------------------------------------------|
-| KotPreferences | `4.0.0`  | **independent** of any of my other libraries                                                                            |
-| Lumberjack     | `10.0.0` | **depends on** KMPParcelize                                                                                             |
-|                |          | `feedback` module... depends on KMPMail - the mail library is needed to send the feedback mails                         |
-|                |          | `composeviewer` module... depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality |
+| Library        | Version  | Dependencies                | Info                                                                                                                                                                                                                                                                     |
+|----------------|----------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| KotPreferences | `4.0.0`  | --                          |                                                                                                                                                                                                                                                                          |
+| Lumberjack     | `10.0.0` | **depends on** KMPParcelize | the `feedback`{ title="depends on KMPMail - the mail library is needed to send the feedback mails" } and `composeviewer` { title = "depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality" } module have additional dependencies |    
 
 ## Compose Libraries
 
@@ -50,11 +48,15 @@ If a new major version of any library is needed, I will update this documentatio
     Following libraries are composable libraries and do depend on the compose version.
     Usually it's safe to update the compose version to a newer versions but following libraries are using the above mentioned compose versions.
 
-| Library            | Version | Info |
-|--------------------|---------|------|
-| ComposeChangelog   | `...`   | ...  |
-| ComposeColors      | `...`   | ...  |
-| ComposeDebugDrawer | `...`   | ...  |
-| ComposeDialogs     | `...`   | ...  |
-| ComposePreferences | `...`   | ...  |
-| ComposeThemer      | `...`   | ...  |
+| Library            | Version | Info                                                               |
+|--------------------|---------|--------------------------------------------------------------------|
+| ComposeChangelog   | `4.0.0` | **depends on** KMPParcelize and KMPPlatformContext                 |
+|                    |         | `statesaver-preferences` module... depends on KotPreferences       |
+| ComposeColors      | `2.0.0` | **independent** of any of my other libraries                       |
+| ComposeDebugDrawer | `3.0.0` | **depends on** KMPParcelize and KMPPlatformContext                 |
+|                    |         | `plugin-kotpreferences` module... depends on KotPreferences        |
+|                    |         | `plugin-lumberjack` module... depends on Lumberjack                |
+| ComposeDialogs     | `4.0.0` | **independent** of any of my other libraries                       |
+|                    |         | `dialog-color` module... depends on KMPParcelize and ComposeColors |
+| ComposePreferences | `...`   | ...                                                                |
+| ComposeThemer      | `2.0.0` | **independent** of any of my other libraries                       |
