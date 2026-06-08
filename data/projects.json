@@ -10,7 +10,7 @@
         },
         {
           "name": "KMPPlatformContext",
-          "description": "Helps to use the android context without custum setup inside `common` code and also provides a platform default `IO Context`.",
+          "description": "Helps to use the android context without custum setup inside `common` code and also provides a platform default `io context`.",
           "main-maven-id": "io.github.mflisar.kmpplatformcontext/core"
         },
         {
@@ -20,7 +20,7 @@
         },
         {
           "name": "KMPIcon",
-          "description": "A gradle plugin to generate icons for KMP projects based on an source image.",
+          "description": "A gradle plugin to generate icons for KMP projects based on a source image.",
           "main-maven-id": "io.github.mflisar.kmpicon/plugin"
         }
       ]
