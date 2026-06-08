@@ -36,10 +36,10 @@ If a new major version of any library is needed, I will update this documentatio
 
     Following libraries are no composable libraries but may contain a composable module.
 
-| Library        | Version  | Dependencies                | Info                                                                                                                                                                                                                                                                     |
-|----------------|----------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| KotPreferences | `4.0.0`  | --                          |                                                                                                                                                                                                                                                                          |
-| Lumberjack     | `10.0.0` | **depends on** KMPParcelize | the `feedback`{ title="depends on KMPMail - the mail library is needed to send the feedback mails" } and `composeviewer` { title = "depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality" } module have additional dependencies |    
+| Library        | Version  | Dependencies | Info                                                                                                                                                                                                                                                                     |
+|----------------|----------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| KotPreferences | `4.0.0`  | --           |                                                                                                                                                                                                                                                                          |
+| Lumberjack     | `10.0.0` | KMPParcelize | the `feedback`{ title="depends on KMPMail - the mail library is needed to send the feedback mails" } and `composeviewer`{ title = "depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality" } module have an additional dependency |    
 
 ## Compose Libraries
 
@@ -48,15 +48,11 @@ If a new major version of any library is needed, I will update this documentatio
     Following libraries are composable libraries and do depend on the compose version.
     Usually it's safe to update the compose version to a newer versions but following libraries are using the above mentioned compose versions.
 
-| Library            | Version | Info                                                               |
-|--------------------|---------|--------------------------------------------------------------------|
-| ComposeChangelog   | `4.0.0` | **depends on** KMPParcelize and KMPPlatformContext                 |
-|                    |         | `statesaver-preferences` module... depends on KotPreferences       |
-| ComposeColors      | `2.0.0` | **independent** of any of my other libraries                       |
-| ComposeDebugDrawer | `3.0.0` | **depends on** KMPParcelize and KMPPlatformContext                 |
-|                    |         | `plugin-kotpreferences` module... depends on KotPreferences        |
-|                    |         | `plugin-lumberjack` module... depends on Lumberjack                |
-| ComposeDialogs     | `4.0.0` | **independent** of any of my other libraries                       |
-|                    |         | `dialog-color` module... depends on KMPParcelize and ComposeColors |
-| ComposePreferences | `...`   | ...                                                                |
-| ComposeThemer      | `2.0.0` | **independent** of any of my other libraries                       |
+| Library            | Version | Dependencies                     | Info                                                                                                                                                               |
+|--------------------|---------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ComposeChangelog   | `4.0.0` | KMPParcelize, KMPPlatformContext | the `statesaver-preferences`{ title = "depends on KotPreferences"} module has an additional dependency                                                             |
+| ComposeColors      | `2.0.0` | --                               |                                                                                                                                                                    |
+| ComposeDebugDrawer | `3.0.0` | KMPParcelize, KMPPlatformContext | the `plugin-kotpreferences`{ title = "depends on KotPreferences" } and `plugin-lumberjack`{ title = "depends on Lumberjack" } modules have additional dependencies |
+| ComposeDialogs     | `4.0.0` | --                               | the `dialog-color`{ title = "depends on KMPParcelize and ComposeColors"} module depends on additional dependencies                                                 |
+| ComposePreferences | `...`   | --                               | ...                                                                                                                                                                |
+| ComposeThemer      | `2.0.0` | --                               | **independent** of any of my other libraries                                                                                                                       |
