@@ -42,9 +42,10 @@ If a new major version of any library is needed, I will update this documentatio
 
 Notes:
 
-* *(1)* Some lumberjack modules do have additional dependencies:
-  * `feedback`... depends on `KMPMail` - the mail library is needed to send the feedback mails
-  * `composeviewer`... depends on `KMPPlatformContext` - the context is needed for the copy to clipboard functionality
+*(1)* Some lumberjack modules do have additional dependencies:
+
+* `feedback` module... depends on `KMPMail` - the mail library is needed to send the feedback mails
+* `composeviewer` module... depends on `KMPPlatformContext` - the context is needed for the copy to clipboard functionality
 
 ## Compose Libraries
 
