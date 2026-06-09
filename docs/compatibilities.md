@@ -39,7 +39,7 @@ If a new major version of any library is needed, I will update this documentatio
 | Library        | Version  | Dependencies   | Info                                                                                                                                                                                                                                                                   |
 |----------------|----------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | KotPreferences | `4.0.0`  | --             |                                                                                                                                                                                                                                                                        |
-| Lumberjack     | `10.0.0` | KMPParcelize | the `feedback`{ title="depends on KMPMail - the mail library is needed to send the feedback mails" } and `composeviewer`{ title="depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality" } module have an additional dependency |    
+| Lumberjack     | `10.0.0` | <span class="library">KMPParcelize</span | the `feedback`{ title="depends on KMPMail - the mail library is needed to send the feedback mails" } and `composeviewer`{ title="depends on KMPPlatformContext - the context is needed for the copy to clipboard functionality" } module have an additional dependency |    
 
 ## Compose Libraries
 
