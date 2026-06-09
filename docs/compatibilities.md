@@ -12,13 +12,10 @@ This documentation shows the compatibility of all libraries with the following b
 | Jetbrains Compose          | `1.11.1` |
 | Jetbrains Compose Material | `1.9.0`  |
 
-**Version Updates:** As long as the major version remains the same, updates are safe. For new major versions, this documentation will be updated.
 
-### Categories
+!!! info "Version Updates"
 
-- **Small Utilities** — Independent of Compose versions, always safe to update
-- **Libraries** — Base libraries (some with Compose modules)
-- **Compose Libraries** — Directly bound to Compose versions
+    As long as the major version remains the same, updates are safe. For new major versions, this documentation will be updated.
 
 ## Small Utilities
 
@@ -40,13 +37,10 @@ This documentation shows the compatibility of all libraries with the following b
 
     Following libraries are no composable libraries but may contain a composable module.
 
-| Library        | Version  | Dependencies   | Info                                                                             |
-|----------------|----------|----------------|----------------------------------------------------------------------------------|
-| KotPreferences | `4.0.0`  | --             |                                                                                  |
-| Lumberjack     | `10.0.0` | `KMPParcelize` | the `feedback`[^1] and `composeviewer`[^2] modules have an additional dependency |    
-
-[^1]: depends on `KMPMail`
-[^2]: depends on `KMPPlatformContext`
+| Library        | Version  | Dependencies   | Info                                                                                      |
+|----------------|----------|----------------|-------------------------------------------------------------------------------------------|
+| KotPreferences | `4.0.0`  | --             |                                                                                           |
+| Lumberjack     | `10.0.0` | `KMPParcelize` | the `feedback`[^MAIL] and `composeviewer`[^CONTEXT] modules have an additional dependency |
 
 ## Compose Libraries
 
@@ -56,17 +50,17 @@ This documentation shows the compatibility of all libraries with the following b
     Usually it's safe to update the compose version to a newer versions but following libraries are using the above mentioned compose versions.
 
 
-| Library            | Version | Dependencies                         | Info                                                                                              |
-|--------------------|---------|--------------------------------------|---------------------------------------------------------------------------------------------------|
-| ComposeChangelog   | `4.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^3] module has an additional dependency                              |
-| ComposeColors      | `2.0.0` | --                                   |                                                                                                   |
-| ComposeDebugDrawer | `3.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^4] and `plugin-lumberjack`[^5] modules have an additional dependency |
-| ComposeDialogs     | `4.0.0` | --                                   | the `dialog-color`[^6] module has additional dependencies                                         |
-| ComposePreferences | `3.0.0` | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^7] module has an additional dependency                                      |
-| ComposeThemer      | `2.0.0` | --                                   |                                                                                                   |
+| Library            | Version | Dependencies                         | Info                                                                                                  |
+|--------------------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ComposeChangelog   | `4.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^PREFS] module has an additional dependency                              |
+| ComposeColors      | `2.0.0` | --                                   |                                                                                                       |
+| ComposeDebugDrawer | `3.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^PREFS] and `plugin-lumberjack`[^L] modules have an additional dependency |
+| ComposeDialogs     | `4.0.0` | --                                   | the `dialog-color`[^2] module has additional dependencies                                             |
+| ComposePreferences | `3.0.0` | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^PREFS] module has an additional dependency                                      |
+| ComposeThemer      | `2.0.0` | --                                   |                                                                                                       |
 
-[^3]: depends on `KotPreferences`
-[^4]: depends on `KotPreferences`
-[^5]: depends on `Lumberjack`
-[^6]: depends on `KMPParcelize` and `ComposeColors`
-[^7]: depends on `KotPreferences`
+[^MAIL]: depends on `KMPMail`
+[^CONTEXT]: depends on `KMPPlatformContext`
+[^PREFS]: depends on `KotPreferences`
+[^L]: depends on `Lumberjack`
+[^2]: depends on `KMPParcelize` and `ComposeColors`
