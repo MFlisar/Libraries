@@ -22,8 +22,3 @@
   background-color: rgba(159, 168, 218, 0.18);
   color: #c5cae9;
 }
-
-/* Hover */
-.library:hover {
-  background-color: rgba(63, 81, 181, 0.22);
-}
