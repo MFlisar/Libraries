@@ -85,9 +85,8 @@ extra_css = ["stylesheets/extra.css"]
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
-
-#palette.primary = "indigo"
-#palette.accent = "indigo"
+palette.primary = "indigo"
+palette.accent = "indigo"
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
