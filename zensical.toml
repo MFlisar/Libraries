@@ -311,4 +311,5 @@ toggle.name = "Switch to light mode"
 [project.markdown_extensions.pymdownx.tilde]
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.footnotes]
 
