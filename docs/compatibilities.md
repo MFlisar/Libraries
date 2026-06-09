@@ -55,7 +55,7 @@ This documentation shows the compatibility of all libraries with the following b
 | ComposeChangelog   | `4.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^PREFS] module has an additional dependency                              |
 | ComposeColors      | `2.0.0` | --                                   |                                                                                                       |
 | ComposeDebugDrawer | `3.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^PREFS] and `plugin-lumberjack`[^L] modules have an additional dependency |
-| ComposeDialogs     | `4.0.0` | --                                   | the `dialog-color`[^2] module has additional dependencies                                             |
+| ComposeDialogs     | `4.0.0` | --                                   | the `dialog-color`[^PARC+COLORS] module has additional dependencies                                   |
 | ComposePreferences | `3.0.0` | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^PREFS] module has an additional dependency                                      |
 | ComposeThemer      | `2.0.0` | --                                   |                                                                                                       |
 
@@ -63,4 +63,4 @@ This documentation shows the compatibility of all libraries with the following b
 [^CONTEXT]: depends on `KMPPlatformContext`
 [^PREFS]: depends on `KotPreferences`
 [^L]: depends on `Lumberjack`
-[^2]: depends on `KMPParcelize` and `ComposeColors`
+[^PARC+COLORS]: depends on `KMPParcelize` and `ComposeColors`
