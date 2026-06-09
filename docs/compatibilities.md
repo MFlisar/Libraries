@@ -19,7 +19,7 @@ This documentation shows the compatibility of all libraries with the following b
 - **Small Utilities** — Independent of Compose versions, always safe to update
 - **Libraries** — Base libraries (some with Compose modules)
 - **Compose Libraries** — Directly bound to Compose versions
-- 
+
 ## Small Utilities
 
 !!! note
@@ -52,11 +52,18 @@ This documentation shows the compatibility of all libraries with the following b
     Following libraries are composable libraries and do depend on the compose version.
     Usually it's safe to update the compose version to a newer versions but following libraries are using the above mentioned compose versions.
 
-| Library            | Version | Dependencies                          | Info                                                                                                                                                            |
-|--------------------|---------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ComposeChangelog   | `4.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`{ title="depends on `KotPreferences`"} module has an additional dependency                                                            |
-| ComposeColors      | `2.0.0` | --                                    |                                                                                                                                                                 |
-| ComposeDebugDrawer | `3.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`{ title="depends on `KotPreferences`" } and `plugin-lumberjack`{ title="depends on `Lumberjack`" } modules have an additional dependency |
-| ComposeDialogs     | `4.0.0` | --                                    | the `dialog-color`{ title="depends on `KMPParcelize` and `ComposeColors`"} module has additional dependencies                                                       |
-| ComposePreferences | `3.0.0` | `KMPParcelize`, `ComposeDialogs`      | the `kotpreferences`{ title="depends on `KotPreferences`" } module has an additional dependency                                                                   |
-| ComposeThemer      | `2.0.0` | --                                    |                                                                                                                                                                 |
+
+| Library            | Version | Dependencies                         | Info                                                                                              |
+|--------------------|---------|--------------------------------------|---------------------------------------------------------------------------------------------------|
+| ComposeChangelog   | `4.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^1] module has an additional dependency                              |
+| ComposeColors      | `2.0.0` | --                                   |                                                                                                   |
+| ComposeDebugDrawer | `3.0.0` | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^2] and `plugin-lumberjack`[^3] modules have an additional dependency |
+| ComposeDialogs     | `4.0.0` | --                                   | the `dialog-color`[^4] module has additional dependencies                                         |
+| ComposePreferences | `3.0.0` | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^5] module has an additional dependency                                      |
+| ComposeThemer      | `2.0.0` | --                                   |                                                                                                   |
+
+[^1]: depends on `KotPreferences`
+[^2]: depends on `KotPreferences`
+[^3]: depends on `Lumberjack`
+[^4]: depends on `KMPParcelize` and `ComposeColors`
+[^5]: depends on `KotPreferences`
