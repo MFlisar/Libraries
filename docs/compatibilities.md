@@ -3,19 +3,23 @@ icon: lucide/combine
 title: Compatibility
 ---
 
-Here you see the first documentation about the compatibility of the libraries. I will update this documentation when necessary.
+## Overview
 
-The below defined compatible versions are all based on following compose versions:
+This documentation shows the compatibility of all libraries with the following base versions:
 
 | Dependency                 | Version  |
 |----------------------------|----------|
 | Jetbrains Compose          | `1.11.1` |
 | Jetbrains Compose Material | `1.9.0`  |
 
-You can be sure that it is safe to update library versions if newer versions exist as long as the major version number is the same.
+**Version Updates:** As long as the major version remains the same, updates are safe. For new major versions, this documentation will be updated.
 
-If a new major version of any library is needed, I will update this documentation.
+### Categories
 
+- **Small Utilities** — Independent of Compose versions, always safe to update
+- **Libraries** — Base libraries (some with Compose modules)
+- **Compose Libraries** — Directly bound to Compose versions
+- 
 ## Small Utilities
 
 !!! note
