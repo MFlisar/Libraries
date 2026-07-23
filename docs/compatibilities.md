@@ -20,7 +20,7 @@ This documentation provides compatibility information for all libraries.
 
 **Libraries**
 
-| Library               | Version | Latest Version | Dependencies                         | Info                                                                                                  |
+| Library               | Minimum Version | Latest Version | Dependencies                         | Info                                                                                                  |
 |-----------------------|-------------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------|
 | **Small Utilities**   |             |         |                                      |                                                                                                       |
 | KMPParcelize          | `2.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kmpparcelize/library?style=flat-square&label=) | --                                   |                                                                                                       |
