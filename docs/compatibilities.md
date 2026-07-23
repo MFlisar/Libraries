@@ -3,7 +3,7 @@ icon: lucide/combine
 title: Compatibility
 ---
 
-This documentation shows the compatibility of all my libraries.
+This documentation provides the compatibility matrix for all libraries.
 
 !!! info "Version Updates"
 
@@ -11,10 +11,14 @@ This documentation shows the compatibility of all my libraries.
 
 ## Current Compatibility
 
+**Used Compose Versions**
+
 | Dependency                 | Version  |
 |----------------------------|----------|
 | Jetbrains Compose          | `1.11.1` |
 | Jetbrains Compose Material | `1.9.0`  |
+
+**Libraries**
 
 | Library               | Version | Dependencies                         | Info                                                                                                  |
 |-----------------------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -38,21 +42,29 @@ This documentation shows the compatibility of all my libraries.
 
 ## Compatibility History
 
-### Compatibility Release 2 (2026-07-23)
+!!! info "Compatibility Releases"
+
+    When updating from an older compatibility release, check the compatibility history. It identifies libraries that must be updated together due to binary incompatible changes.
+
+#### Compatibility Release 2 (2026-07-23)
 
 | Library            | Change            |
 |--------------------|-------------------|
 | Lumberjack         | `10.x` → `12.x`   |
 | ComposeDebugDrawer | `3.x` → `4.x`     |
 
-Those libraries must be updated synchronously.
+#### Compatibility Release 1 (Initial Compatibility Release)
 
-### Compatibility Release 1 (Initial Compatibility Release)
+Initial documented compatibility baseline.
+
+**Used Compose Versions**
 
 | Dependency                 | Version  |
 |----------------------------|----------|
 | Jetbrains Compose          | `1.11.1` |
 | Jetbrains Compose Material | `1.9.0`  |
+
+**Libraries**
 
 | Library               | Version |
 |-----------------------|---------|
