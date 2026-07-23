@@ -3,7 +3,7 @@ icon: lucide/combine
 title: Compatibility
 ---
 
-This documentation provides the compatibility matrix for all libraries.
+This documentation provides compatibility information for all libraries.
 
 !!! info "Version Updates"
 
@@ -44,7 +44,7 @@ This documentation provides the compatibility matrix for all libraries.
 
 !!! info "Compatibility Releases"
 
-    When updating from an older compatibility release, check the compatibility history. It identifies libraries that must be updated together due to binary incompatible changes.
+    When updating from an older compatibility release, check the compatibility history below. It identifies libraries that must be updated together due to binary incompatible changes.
 
 #### Compatibility Release 2 (2026-07-23)
 
