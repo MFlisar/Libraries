@@ -48,7 +48,7 @@ This documentation provides compatibility information for all libraries.
 
 #### Compatibility Release 1
 
-<small><em>Released on 2026-07-24</em></small>
+<small><i>Released on 2026-07-24</i></small>
 
 | Library            | Change            |
 |--------------------|-------------------|
