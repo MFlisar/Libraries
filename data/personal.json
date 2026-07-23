@@ -6,7 +6,7 @@
   },
   {
     "name": "Toolbox",
-    "description": "A very big collection of modules for my personal usage only (I use it in all my my apps).",
+    "description": "A very big collection of modules for my personal usage only (I use it in all my apps).",
     "main-maven-id": "io.github.mflisar.toolbox/core"
   },
   {
