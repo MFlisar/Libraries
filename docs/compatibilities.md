@@ -20,25 +20,23 @@ This documentation provides compatibility information for all libraries.
 
 **Libraries**
 
-| Library               | Version | Dependencies                         | Info                                                                                                  |
-|-----------------------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------|
-| **Small Utilities**   |         |                                      |                                                                                                       |
-| KMPParcelize          | `2.x`   | --                                   |                                                                                                       |
-| KMPPlatformContext    | `2.x`   | --                                   |                                                                                                       |
-| KMPMail               | `1.x`   | --                                   |                                                                                                       |
-| KMPIcon               | `1.x`   | --                                   |                                                                                                       |
-| **Libraries**         |         |                                      |                                                                                                       |
-| KotPreferences        | `4.x`   | --                                   |                                                                                                       |
-| Lumberjack            | `11.x`  | `KMPParcelize`, `KMPPlatformContext` | the `feedback`[^MAIL] and `composeviewer`[^CONTEXT] modules have an additional dependency             |
-| **Compose Libraries** |         |                                      |                                                                                                       |
-| ComposeChangelog      | `4.x`   | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^PREFS] module has an additional dependency                              |
-| ComposeColors         | `2.x`   | --                                   |                                                                                                       |
-| ComposeDebugDrawer    | `4.x`   | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^PREFS] and `plugin-lumberjack`[^L] modules have an additional dependency |
-| ComposeDialogs        | `4.x`   | --                                   | the `dialog-color`[^PARC+COLORS] module has additional dependencies                                   |
-| ComposePreferences    | `3.x`   | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^PREFS] module has an additional dependency                                      |
-| ComposeThemer         | `2.x`   | --                                   |                                                                                                       |
-
----
+| Library               | Version | Latest Version | Dependencies                         | Info                                                                                                  |
+|-----------------------|-------------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Small Utilities**   |             |         |                                      |                                                                                                       |
+| KMPParcelize          | `2.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kmpparcelize/library?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| KMPPlatformContext    | `2.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kmpplatformcontext/core?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| KMPMail               | `1.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kmpmail/library?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| KMPIcon               | `1.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kmpicon/plugin?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| **Libraries**         |             |         |                                      |                                                                                                       |
+| KotPreferences        | `4.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.kotpreferences/core?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| Lumberjack            | `11.x`      | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.lumberjack/core?style=for-the-badge&color=blue&label=) | `KMPParcelize`, `KMPPlatformContext` | the `feedback`[^MAIL] and `composeviewer`[^CONTEXT] modules have an additional dependency             |
+| **Compose Libraries** |             |         |                                      |                                                                                                       |
+| ComposeChangelog      | `4.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composechangelog/core?style=for-the-badge&color=blue&label=) | `KMPParcelize`, `KMPPlatformContext` | the `statesaver-preferences`[^PREFS] module has an additional dependency                              |
+| ComposeColors         | `2.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composecolors/core?style=for-the-badge&color=blue&label=) | --                                   |                                                                                                       |
+| ComposeDebugDrawer    | `4.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composedebugdrawer/core?style=for-the-badge&color=blue&label=) | `KMPParcelize`, `KMPPlatformContext` | the `plugin-kotpreferences`[^PREFS] and `plugin-lumberjack`[^L] modules have an additional dependency |
+| ComposeDialogs        | `4.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composedialogs/core?style=for-the-badge&color=blue&label=) | --                                   | the `dialog-color`[^PARC+COLORS] module has additional dependencies                                   |
+| ComposePreferences    | `3.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composepreferences/core?style=for-the-badge&color=blue&label=) | `KMPParcelize`, `ComposeDialogs`     | the `kotpreferences`[^PREFS] module has an additional dependency                                      |
+| ComposeThemer         | `2.x`       | ![Latest](https://img.shields.io/maven-central/v/io.github.mflisar.composethemer/core?style=for-the-badge&color=blue&label=) | --  |   |     
 
 ## Compatibility History
 
