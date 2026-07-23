@@ -47,7 +47,6 @@ This documentation provides compatibility information for all libraries.
     When updating from an older compatibility release, check the compatibility history below. It identifies libraries that must be updated together due to **binary incompatible changes**.
 
 #### Compatibility Release 1
-
 <small><i>Released on 2026-07-24</i></small>
 
 | Library            | Change            |
