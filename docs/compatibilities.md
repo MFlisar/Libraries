@@ -46,43 +46,45 @@ This documentation provides compatibility information for all libraries.
 
     When updating from an older compatibility release, check the compatibility history below. It identifies libraries that must be updated together due to binary incompatible changes.
 
-#### Compatibility Release 2 (2026-07-23)
+#### Compatibility Release 1 (2026-07-23)
 
 | Library            | Change            |
 |--------------------|-------------------|
 | Lumberjack         | `10.x` → `12.x`   |
 | ComposeDebugDrawer | `3.x` → `4.x`     |
 
-#### Compatibility Release 1 (Initial Compatibility Release)
+#### Initial Compatibility Release
 
-Initial documented compatibility baseline.
+??? abstract "Show"
 
-**Used Compose Versions**
+    Initial documented compatibility baseline.
 
-| Dependency                 | Version  |
-|----------------------------|----------|
-| Jetbrains Compose          | `1.11.1` |
-| Jetbrains Compose Material | `1.9.0`  |
+    **Used Compose Versions**
 
-**Libraries**
+    | Dependency                 | Version  |
+    |----------------------------|----------|
+    | Jetbrains Compose          | `1.11.1` |
+    | Jetbrains Compose Material | `1.9.0`  |
 
-| Library               | Version |
-|-----------------------|---------|
-| **Small Utilities**   |         |
-| KMPParcelize          | `2.x`   |
-| KMPPlatformContext    | `2.x`   |
-| KMPMail               | `1.x`   |
-| KMPIcon               | `1.x`   |
-| **Libraries**         |         |
-| KotPreferences        | `4.x`   |
-| Lumberjack            | `10.x`  |
-| **Compose Libraries** |         |
-| ComposeChangelog      | `4.x`   |
-| ComposeColors         | `2.x`   |
-| ComposeDebugDrawer    | `3.x`   |
-| ComposeDialogs        | `4.x`   |
-| ComposePreferences    | `3.x`   |
-| ComposeThemer         | `2.x`   |
+    **Libraries**
+
+    | Library               | Version |
+    |-----------------------|---------|
+    | **Small Utilities**   |         |
+    | KMPParcelize          | `2.x`   |
+    | KMPPlatformContext    | `2.x`   |
+    | KMPMail               | `1.x`   |
+    | KMPIcon               | `1.x`   |
+    | **Libraries**         |         |
+    | KotPreferences        | `4.x`   |
+    | Lumberjack            | `10.x`  |
+    | **Compose Libraries** |         |
+    | ComposeChangelog      | `4.x`   |
+    | ComposeColors         | `2.x`   |
+    | ComposeDebugDrawer    | `3.x`   |
+    | ComposeDialogs        | `4.x`   |
+    | ComposePreferences    | `3.x`   |
+    | ComposeThemer         | `2.x`   |
 
 [^MAIL]: depends on `KMPMail`
 [^CONTEXT]: depends on `KMPPlatformContext`
