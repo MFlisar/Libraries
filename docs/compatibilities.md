@@ -1,6 +1,6 @@
 ---
 icon: lucide/combine
-title: Compatibility
+title: Compatibilities
 ---
 
 This documentation provides compatibility information for all libraries.
